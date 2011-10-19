@@ -1,0 +1,17 @@
+To-do - Attribut för varje klass
+
+Customer:
+  String name
+  String adress
+  String email
+
+Product:
+  String name
+  int productNr
+  int price
+  
+Order:
+  int orderNr
+  Customer customer
+  ArrayList<Product> products
+  
