@@ -10,5 +10,8 @@ public class TestRun {
     products.add(product);
 
     Order order = new Order(111, customer, products);
+    
+    customer.setName("Jakob");
+    System.out.println(customer.getName());
   }
 }
