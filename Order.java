@@ -1,3 +1,19 @@
+import java.util.*;
+
+public class Order {
+  int orderNbr;
+  Customer customer;
+  ArrayList<Product> products;
+
+  public Order(int orderNbr, Customer customer, ArrayList<Product> products) {
+    this.orderNbr = orderNbr;
+    this.customer = customer;
+    this.products = products;
+  }
+}
+
+
+/*
 public class Order {
   private String OrderNr;
   private String OrderDestination;
@@ -35,4 +51,4 @@ public class Order {
       return OrderProdukt;
   }
 }
-
+*/
