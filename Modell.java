@@ -34,7 +34,7 @@ public class Modell {
   //Raderar en kund u listan
   public void taBortKund(String id) {
       Kund = tmpKund;
-      int i = 0
+      int i = 0;
       boolean funnen = false;
      
       while (i < kundReg.size() && funnen == false) {
@@ -63,7 +63,7 @@ public class Modell {
       if (funnen == false) {
           tmpKund = null;
       }
-      return tmpKund
+      return tmpKund;
   }
           //Uppdaterar en kunds namn
   public void uppdateraKundsNamn(String id, String nyttNamn) {
