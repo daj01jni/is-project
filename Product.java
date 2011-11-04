@@ -29,7 +29,7 @@ public class Product {
 	return price;
   }
   
-  piblic void setPrice(int price) {
+  public void setPrice(int price) {
 	this.price = price;
   }
 }
