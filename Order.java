@@ -21,7 +21,7 @@ public class Order {
  
  // Lite osäker på hur jag ska hantera Cutstomer klassen här i "Order"
   public class customer getCustomer() {
-	return Customer
+	return customer;
   }
   
   public void setCustomer (customer) {
