@@ -10,8 +10,33 @@ public class Order {
     this.customer = customer;
     this.products = products;
   }
+  
+  public int getorderNbr() {
+  return orderNbr;
+  }
+  
+  public void setorderNbr(int orderNbr) {
+	this.orderNbr = orderNbr;
+  }
+ 
+ // Lite osäker på hur jag ska hantera Cutstomer klassen här i "Order"
+  public class customer getCustomer() {
+	return Customer
+  }
+  
+  public void setCustomer (customer) {
+	this.customer = customer;
+  }
+  
+ // Samma här med arraylisten som hanterar products
+  public ArrayList<Product> getProduct() {
+	return Product;
+  }
+  
+  public void setProduct(products) {
+	this.products = products
+  }
 }
-
 
 /*
 public class Order {
