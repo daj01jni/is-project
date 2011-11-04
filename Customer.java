@@ -14,4 +14,20 @@ public class Customer {
   public void setName(String name) {
     this.name = name;
   }
+  
+  public String getAdress() {
+  return adress;
+  }
+  
+  public void setAdress(String adress) {
+  this.adress = adress;
+  }
+  
+  public String getEmail() {
+  return email;
+  }
+  
+  public void set setEmail(String email) {
+  this.email = email;
+  }
 }
