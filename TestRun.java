@@ -6,12 +6,11 @@ public class TestRun {
 
     Product product = new Product("kniv", 666, 50);
 
-    ArrayList<Product> products = new ArrayList<Product>();
-    products.add(product);
-
-    Order order = new Order(111, customer, products);
+    Order order = new Order(111, customer, product, 10);
     
     customer.setName("Jakob");
     System.out.println(customer.getName());
+    System.out.println(product.getName());
+    System.out.println(order.toString());
   }
 }

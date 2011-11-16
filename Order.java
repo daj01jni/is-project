@@ -3,77 +3,53 @@ import java.util.*;
 public class Order {
   int orderNbr;
   Customer customer;
-  ArrayList<Product> products;
+  Product product;
+  String orderString;
+  int amount;
+  int totalPrice;
 
-  public Order(int orderNbr, Customer customer, ArrayList<Product> products) {
+  public Order(int orderNbr, Customer customer, Product product, int amount) {
     this.orderNbr = orderNbr;
     this.customer = customer;
-    this.products = products;
+    this.product = product;
+    this.amount = amount;
   }
   
-  public int getorderNbr() {
-  return orderNbr;
+  public int getOrderNbr() {
+    return orderNbr;
   }
   
-  public void setorderNbr(int orderNbr) {
+  public void setOrderNbr(int orderNbr) {
 	this.orderNbr = orderNbr;
   }
  
- // Lite osäker på hur jag ska hantera Cutstomer klassen här i "Order"
-  public class customer getCustomer() {
-	return customer;
+  public Customer getCustomer() {
+	  return customer;
   }
   
-  public void setCustomer (customer) {
-	this.customer = customer;
+  public void setCustomer(Customer customer) {
+	  this.customer = customer;
   }
-  
- // Samma här med arraylisten som hanterar products
-  public ArrayList<Product> getProduct() {
-	return Product;
+
+  public Product getProduct() {
+    return product;
   }
-  
-  public void setProduct(products) {
-	this.products = products
+
+  public void setProduct(Product product) {
+	  this.product = product;
+  }
+
+  private int getTotalPrice() {
+    return product.getPrice() * amount;
+  }
+
+  public String toString() {
+    orderString = "Order number: " + orderNbr + "\n" +
+                  "Customer: " + customer.getName() + "\n" +
+                  "Product: " + product.getName() + "\n" +
+                  "Product price: " + product.getPrice() + "\n" +
+                  "Amount: " + amount + "\n" +
+                  "Total price: " + getTotalPrice();
+    return orderString;
   }
 }
-
-/*
-public class Order {
-  private String OrderNr;
-  private String OrderDestination;
-  private String OrderDatum;
-  private String OrderProdukt;
-
-  public Order(String nyttOrderNr, String nyttOrderDestination, String nyttOrderDatum, String OrderProdukt) {
-      sättOrderNr (nyttOrderNr);
-      sättOrderDestination (nyttOrderDestination);
-      sättOrderDatum (nyttOrderDatum);
-      sättOrderProdukt (nyttOrderProdukt);
-  }
-  public void sättOrderNr (String nyttOrderNr) {
-      OrderNr = nyttOrderNr;
-  }
-  public String avläsOrderNr () {
-      return OrderNr;
-  }
-  public void sättOrderDestination (String nyttOrderDestination) {
-      OrderDestination = nyttOrderDestination;
-  }
-  public String avläsOrderDestination () {
-      return OrderDestination;
-  }
-  public void sättOrderDatum (String nyttOrderDatum) {
-      OrderDatum = nyttOrderDatum;
-  }
-  public String avläsOrderDatum () {
-      return OrderDatum;
-  }
-  public void sättOrderProdukt (String nyttOrderProdukt) {
-      OrderProdukt = nyttOrderProdukt;
-  }
-  public String avläsOrderProdukt () {
-      return OrderProdukt;
-  }
-}
-*/
