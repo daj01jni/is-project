@@ -44,7 +44,7 @@ public class TestInput {
             System.out.println("Enter productname");
             String customerProductname = scan.nextLine();
             // change the fucking productname
-            customer.setProductname(peoductName);
+            customer.setProductname(productName);
           } else if (in.equals("d")) {
             // delete product
           } else if (in.equals("l")) {
