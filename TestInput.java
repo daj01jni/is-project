@@ -19,6 +19,7 @@ public class TestInput {
 
         System.out.println("Handlez customaorz!");
         System.out.println("New (n), delete (d), list (l)");
+
         while (!in.equals("q")) {
           in = scan.nextLine();
           if (in.equals("n")) {
@@ -34,11 +35,14 @@ public class TestInput {
           } else {
             // something else
           }
-        }
+        } // end while
+
       } else if (in.equals("p")) {
         System.out.println("Handlez producxtz!");
         System.out.println("New(n), delete(d), list(l)");
-        in = scan.nextLine();
+
+        while (!in.equals("q")) {
+          in = scan.nextLine();
           if (in.equals("n")) {
             // create new product
             System.out.println("Enter productname");
@@ -51,11 +55,14 @@ public class TestInput {
             System.out.println(customer.getProductname());
           } else {
             // something else
-
+          }
+        } // end while
       } else if (in.equals("o")) {
         System.out.println("Handlez ordeaaarz!");
         System.out.println("New(n), delete(d), list(l)");
-        in = scan.nextLine();
+
+        while (!in.equals("q")) {
+          in = scan.nextLine();
           if (in.equals("n")) {
             // create new order
             System.out.println("Enter order");
@@ -66,9 +73,11 @@ public class TestInput {
             // delete order
           } else if (in.equals("l")) {
             System.out.println(customer.getOrder());
-      } else {
-        System.out.println("RTFM");
-      }
-    }
-  }
-}
+          } else {
+            System.out.println("RTFM");
+          }
+        } // end while
+      } // end else if
+    } // end while
+  } // end main
+} // end class
