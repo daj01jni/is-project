@@ -15,7 +15,6 @@ public class TestInput {
       in = scan.nextLine();
 
       if (in.equals("c")) {
-        Customer customer = new Customer("", "", "");
 
         System.out.println("Handlez customaorz!");
         System.out.println("New (n), delete (d), list (l)");
@@ -23,11 +22,22 @@ public class TestInput {
         while (!in.equals("q")) {
           in = scan.nextLine();
           if (in.equals("n")) {
-            // create new customer
+            // What do we need?
+            // Customer(String name, String address, String email)
+            String name, address, email;
+
+            // Get info from user
             System.out.println("Enter name");
-            String customerName = scan.nextLine();
-            // change the fucking name
-            customer.setName(customerName);
+            name = scan.nextLine();
+            System.out.println("Ender address");
+            address = scan.nextLine();
+            System.out.println("Enter email");
+            email = scan.nextLine();
+
+            // Create new customer
+            Customer customer = new Customer(name, address, email);
+
+            // Maybe add customer to a list?
           } else if (in.equals("d")) {
             // delete customer
           } else if (in.equals("l")) {
