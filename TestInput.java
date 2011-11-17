@@ -1,12 +1,12 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TestInput {
-  String choice;
-  Scanner reader;
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     String in = "something";
+    ArrayList<Customer> customerList = new ArrayList<Customer>();
 
     System.out.println("What u want fool?");
     System.out.println("Hantera Kund (c), Produkt (p), Order (o):");
@@ -38,10 +38,13 @@ public class TestInput {
             Customer customer = new Customer(name, address, email);
 
             // Maybe add customer to a list?
+            customerList.add(customer);
           } else if (in.equals("d")) {
             // delete customer
           } else if (in.equals("l")) {
-            System.out.println(customer.getName());
+            for (Customer customer : customerList) {
+              System.out.println(customer.getName());
+            }
           } else {
             // something else
           }
@@ -54,17 +57,11 @@ public class TestInput {
         while (!in.equals("q")) {
           in = scan.nextLine();
           if (in.equals("n")) {
-            // create new product
             System.out.println("Enter productname");
-            String customerProductname = scan.nextLine();
-            // change the fucking productname
-            customer.setProductname(productName);
           } else if (in.equals("d")) {
             // delete product
           } else if (in.equals("l")) {
-            System.out.println(customer.getProductname());
           } else {
-            // something else
           }
         } // end while
       } else if (in.equals("o")) {
@@ -74,15 +71,9 @@ public class TestInput {
         while (!in.equals("q")) {
           in = scan.nextLine();
           if (in.equals("n")) {
-            // create new order
             System.out.println("Enter order");
-            String Order = scan.nextLine();
-            // change the fucking order
-            customer.setOrder(customerName);
           } else if (in.equals("d")) {
-            // delete order
           } else if (in.equals("l")) {
-            System.out.println(customer.getOrder());
           } else {
             System.out.println("RTFM");
           }
