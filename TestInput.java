@@ -50,20 +50,40 @@ public class TestInput {
           }
         } // end while
 
-      } else if (in.equals("p")) {
+      }       else if (in.equals("p")) {
+          
+          
         System.out.println("Handlez producxtz!");
         System.out.println("New(n), delete(d), list(l)");
 
         while (!in.equals("q")) {
           in = scan.nextLine();
           if (in.equals("n")) {
+              
+            String name;
+            int productNbr, price; 
+                
             System.out.println("Enter productname");
+            name = scan.nextLine();
+            System.out.println("Enter productnumber")
+            productNbr = scan.nextInt();         
+            System.out.println("Enter price");
+            price = scan.nextInt();
+            
+            //Gör ny produkt
+            Product product = new Product(name, productNbr, price);
+            
+            productList.add(product);
           } else if (in.equals("d")) {
             // delete product
           } else if (in.equals("l")) {
+              for (Product product = productList) {
+                  System.out.println(product.getName());
+              }
           } else {
           }
         } // end while
+      } // end while
       } else if (in.equals("o")) {
         System.out.println("Handlez ordeaaarz!");
         System.out.println("New(n), delete(d), list(l)");
