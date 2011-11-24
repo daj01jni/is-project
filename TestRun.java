@@ -4,7 +4,6 @@ public class TestRun {
   public static void main(String[] args) {
     Customer customer = new Customer("Namn", "Adress", "Email");
 
-    Product product = new Product("kniv", 666, 50);
 
     Order order = new Order(111, customer, product, 10);
     
@@ -12,5 +11,7 @@ public class TestRun {
     System.out.println(customer.getName());
     System.out.println(product.getName());
     System.out.println(order.toString());
+
+    Product product = new Product("kniv", 666, 50);
   }
 }

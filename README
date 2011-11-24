@@ -15,3 +15,19 @@ Order:
   Customer customer
   ArrayList<Product> products
   
+== Specification ==
+
+= CustomerController =
+CustomerController  CustomerController(CustomerRegister customerRegister)
+boolean             createCustomer(String name, String address, String email)
+boolean             deleteCustomer(String name)
+boolean             deleteCustomer(String email)
+
+= CustomerRegister =
+CustomerRegister  CustomerRegister()
+boolean           addCustomer(Customer customer)
+Customer          findCustomer(String name)
+Customer          findCustomer(int id)
+Customer          findCustomer(String email)
+Customer          findCustomer(String address)
+boolean           removeCustomer(Customer customer)

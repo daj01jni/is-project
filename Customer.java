@@ -15,7 +15,7 @@ public class Customer {
     this.name = name;
   }
   
-  public String getAdress() {
+  public String getAddress() {
     return address;
   }
   
