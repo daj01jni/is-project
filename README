@@ -17,12 +17,6 @@ Order:
   
 == Specification ==
 
-= CustomerController =
-CustomerController  CustomerController(CustomerRegister customerRegister)
-boolean             createCustomer(String name, String address, String email)
-boolean             deleteCustomerByName(String name)
-boolean             deleteCustomerByEmail(String email)
-
 = CustomerRegister =
 CustomerRegister  CustomerRegister()
 boolean           addCustomer(Customer customer)
@@ -30,3 +24,7 @@ Customer          findCustomerByName(String name)
 Customer          findCustomerById(int id)
 Customer          findCustomerByEmail(String email)
 boolean           removeCustomer(Customer customer)
+... Controller-funktionalitet
+boolean             createCustomer(String name, String address, String email)
+boolean             deleteCustomerByName(String name)
+boolean             deleteCustomerByEmail(String email)
