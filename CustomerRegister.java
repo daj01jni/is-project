@@ -1,10 +1,11 @@
 import java.util.*;
-public class CustomerReg {
+
+public class CustomerRegister {
   private Customer customer;
 	private HashMap<String, Customer> customers = new HashMap();
 	
 	
-	public CustomerReg(){
+	public CustomerRegister(){
 	}
 	
 	public Customer findCustomer(String nbr){

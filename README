@@ -20,14 +20,13 @@ Order:
 = CustomerController =
 CustomerController  CustomerController(CustomerRegister customerRegister)
 boolean             createCustomer(String name, String address, String email)
-boolean             deleteCustomer(String name)
-boolean             deleteCustomer(String email)
+boolean             deleteCustomerByName(String name)
+boolean             deleteCustomerByEmail(String email)
 
 = CustomerRegister =
 CustomerRegister  CustomerRegister()
 boolean           addCustomer(Customer customer)
-Customer          findCustomer(String name)
-Customer          findCustomer(int id)
-Customer          findCustomer(String email)
-Customer          findCustomer(String address)
+Customer          findCustomerByName(String name)
+Customer          findCustomerById(int id)
+Customer          findCustomerByEmail(String email)
 boolean           removeCustomer(Customer customer)
