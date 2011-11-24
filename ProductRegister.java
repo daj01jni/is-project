@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class ProductReg {
   private Product product;
@@ -16,7 +15,7 @@ public void addProduct(Product product){
 products.put(product.getname(), product);  //getname(), är fel! wai?
 }
 
-public void removeproduct(String name){
+public void removeProduct(String name){
 products.remove(name);
 }
 
