@@ -8,12 +8,34 @@ public class CustomerController {
     this.customerRegister = customerRegister;
   }
 
-  public boolean createCustomer(String name, String address, String email) {}
+  public boolean createCustomer(String name, String address, String email) 
+  {
+    Customer customer = new Customer(name, address, email);
+    customerRegister.add(customer);
+    return true;
+  }
 
-  public boolean deleteCustomer(String nameOrEmail) {}
+  public boolean deleteCustomer(String name) 
+  {
+    if ( customerRegister.hasCustomer(name) )
+    {
+      customerRegister.remove(name);
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-  public Customer getCustomer(String nameOrEmail) {}
-
-  public String printCustomer(String nameOrEmail) {}
+  public String printCustomer(String name) 
+  {
+    if ( customerRegister.hasCustomer(name) )
+    {
+      Customer customer = customerRegister.getCustomer(name);
+      String customerString = customer.getEmail();
+      return customerString;
+    } else {
+      return "";
+    }
+  }
 
 } // end class
